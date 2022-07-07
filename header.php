@@ -1,31 +1,41 @@
+<?php
+  session_start();
+  include_once 'includes/functions.inc.php';
+?>
 
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PHP Project 01</title>
+    <!--I won't do more than barebone HTML, since this isn't an HTML tutorial.-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
 
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Login</title>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/js/script.js">
-     <link rel="stylesheet" href="/css/style.css">
-     <link rel="stylesheet" href="/css/reset.css">
+    <!--A quick navigation-->
+    <nav>
+      <div class="wrapper">
+        <a href="index.php"><img src="img/logo-white.png" alt="Blogs logo"></a>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="discover.php">About Us</a></li>
+          <li><a href="blog.php">Find Blogs</a></li>
+          <?php
+            if (isset($_SESSION["useruid"])) {
+              echo "<li><a href='profile.php'>Profile Page</a></li>";
+              echo "<li><a href='logout.php'>Logout</a></li>";
+            }
+            else {
+              echo "<li><a href='signup.php'>Sign up</a></li>";
+              echo "<li><a href='login.php'>Log in</a></li>";
+            }
+          ?>
+        </ul>
+      </div>
+    </nav>
 
- 
- </head>
-
- <body>
-     <nav>
-         <div class="wrapper">
-             <a href="index.php"><img src="img/logo-white.png" alt="Blogs logo" srcset=""></a>
-             <ul>
-                 <li><a href="index.php">Home</a></li>
-                 <li><a href="discover.php">Discover</a></li>
-                 <li><a href="blog.php">Blog</a></li>
-                 <li><a href="signup.php">Signup</a></li>
-                 <li><a href="login.php">Login</a></li>
-             </ul>
-         </div>
-     </nav>
-	 
+<!--A quick wrapper to align the content (ends in footer.php)-->
+<div class="wrapper">

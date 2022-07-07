@@ -1,243 +1,135 @@
-/* 
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
 body {
-    line-height:1;
+  background-color: #333333;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-    display:block;
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Roboto', sans-serif;
+  color: #111;
+  line-height: 24px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 32px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: #111111;
+}
+
+nav .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 60px;
 }
 
 nav ul {
-    list-style:none;
+
 }
 
-blockquote, q {
-    quotes:none;
+nav ul li {
+  list-style: none;
+  float: left;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
+nav ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 16px;
+  text-transform: uppercase;
 }
 
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+nav ul li a:hover {
+  color: #31a6ff;
 }
 
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
+section {
+  background-color: #fff;
+  width: 94%;
+  padding: 20px 3%;
 }
 
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000; 
-    font-style:italic;
-    font-weight:bold;
-}
+/* index */
 
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;   
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
-    vertical-align:middle;
-}
-
-/*MY CODE*/
-
-.main-wrapper {
-    margin: 0 auto;
-    width: 1000px;
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    background-color: #ccc;
-}
-
-header nav {
-    width: 100%;
-    height: 60px;
-    background-color: #fff;
-}
-
-header nav ul {
-    float: left;
-}
-
-header nav ul li {
-    float: left;
-    list-style: none;
-}
-
-header nav ul li a {
-    font-family: arial;
-    font-size: 16px;
-    color: #111;
-    line-height: 63px;
-}
-
-header .nav-login {
-    float: right;
-}
-
-header .nav-login form {
-    float: left;
-    padding-top: 15px;
-}
-
-header .nav-login form input {
-    float: left;
-    width: 140px;
-    height: 30px;
-    padding: 0px 10px;
-    margin-right: 10px;
-    border: none;
-    background-color: #ccc;
-    font-family: arial;
-    font-size: 14px;
-    color: #111;
-    line-height: 30px;
-}
-
-header .nav-login form button {
-    float: left;
-    width: 60px;
-    height: 30px;
-    margin-right: 10px;
-    border: none;
-    background-color: #f3f3f3;
-    font-family: arial;
-    font-size: 14px;
-    color: #111;
-    cursor: pointer;
-}
-
-header .nav-login form button:hover {
-    background-color: #ccc;
-}
-
-header .nav-login a {
-    display: block;
-    width: 60px;
-    height: 60px;
-    border: none;
-    float: left;
-    background-color: #fff;
-    font-family: arial;
-    font-size: 16px;
-    color: #111;
-    line-height: 63px;
-    cursor: pointer;
-}
-
-.main-container {
-    padding-top: 40px;
-}
-
-.main-container h2 {
-    font-family: arial;
-    font-size: 40px;
-    color: #111;
-    line-height: 50px;
+.index-intro p {
     text-align: center;
 }
 
-/*signup.php*/
-
-.signup-form {
-    width: 400px;
-    margin: 0 auto;
-    padding-top: 30px;
+.index-categories-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.signup-form input {
-    width: 90%;
-    height: 40px;
-    padding: 0px 5%;
-    margin-bottom: 4px;
-    border: none;
-    background-color: #fff;
-    font-family: arial;
-    font-size: 16px;
-    color: #111;
-    line-height: 40px;
+.index-categories-list div {
+  width: 24%;
+  height: 200px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.signup-form button {
-    display: block;
-    margin: 0 auto;
-    width: 30%;
-    height: 40px;
-    border: none;
-    background-color: #222;
-    font-family: arial;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
+/* sign up */
+
+.signup-form-form {
+  display: flex;
+  justify-content: center;
 }
 
-.signup-form button:hover {
-    background-color: #111;
+.signup-form p {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #007ecc;
+}
+
+.signup-form form {
+  width: 30%;
+}
+
+.signup-form form input {
+  width: calc(100% - 16px);
+  padding: 6px;
+  margin-bottom: 4px;
+}
+
+.signup-form form button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  cursor: pointer;
 }
