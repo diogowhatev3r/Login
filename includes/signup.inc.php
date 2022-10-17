@@ -1,4 +1,5 @@
 <?php
+//A proxima linha confirma que o arquivo foi incluido e portanto não acederam à pagina de forma direta, mas sim pelo submit do form
 
 if (isset($_POST["submit"])) {
 
@@ -13,7 +14,7 @@ if (isset($_POST["submit"])) {
   // These functions can be found in functions.inc.php
 
   require_once "dbh.inc.php";
-  require_once 'functions.inc.php';
+  require_once "functions.inc.php";
 
   // Left inputs empty
   // We set the functions "!== false" since "=== true" has a risk of giving us the wrong outcome
@@ -46,7 +47,7 @@ if (isset($_POST["submit"])) {
 
   // Now we insert the user into the database
   createUser($conn, $name, $email, $username, $pwd);
-
+//Senao volta para para a pagina de signup
 } else {
 	header("location: ../signup.php");
     exit();
